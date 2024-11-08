@@ -1,0 +1,15 @@
+:root {
+  --xxlarge: 170px;
+  --xlarge: 100px;
+  --large: 28px;
+  --medium: 18px;
+  --small: 16px;
+  --xsamll: 14px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", serif;
+}
