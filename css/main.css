@@ -1,5 +1,5 @@
 :root {
-  --xxlarge: 170px;
+  /* --xxlarge: 170px; */
   --xlarge: 100px;
   --large: 28px;
   --medium: 18px;
@@ -12,4 +12,32 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Noto Sans KR", serif;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  background-color: blanchedalmond;
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main_container > .main_wrapper {
+  text-align: center;
+}
+
+.date {
+  font-size: var(--large);
+  font-weight: 500;
+}
+
+.time {
+  font-size: var(--xlarge);
+  font-weight: 400;
+  margin-top: -20px;
 }
