@@ -30,6 +30,7 @@ body {
 
 .main_container > .main_wrapper {
   text-align: center;
+  /* position: fixed; */
 }
 
 .date {
@@ -61,4 +62,40 @@ body {
   position: fixed;
   bottom: 20px;
   padding: 20px;
+}
+
+.bookmark_open {
+  width: 300px;
+  padding: 15px 30px;
+  font-size: var(--xsamll);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.bookmark_close {
+  width: 300px;
+  padding: 15px 30px;
+  font-size: var(--xsamll);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  color: black;
+  cursor: pointer;
+}
+
+.bookmark_bar {
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50px;
+  right: 0;
+  height: calc(100vh - 50px);
 }
