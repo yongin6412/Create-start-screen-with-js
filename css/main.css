@@ -98,4 +98,13 @@ body {
   top: 50px;
   right: 0;
   height: calc(100vh - 50px);
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.bookmark_input_form {
+  display: flex;
+  flex-direction: column;
 }
