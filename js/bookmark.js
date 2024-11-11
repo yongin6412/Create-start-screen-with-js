@@ -54,6 +54,9 @@ const bookmarkItem = (item) => {
   const deleteBtn = document.createElement("div");
   deleteBtn.classList.add("delete_btn");
   deleteBtn.textContent = "삭제";
+  deleteBtn.addEventListener("click", () => {
+    deleteBookmarkItem(item.createAt);
+  });
 
   bookmarkItem.appendChild(bookmarkUrl);
   bookmarkItem.appendChild(deleteBtn);
@@ -67,6 +70,18 @@ const setBookmarkList = () => {
   bookmarkList.forEach((item) => {
     bookmarkItem(item);
   });
+};
+
+const deleteBookmarkItem = (id) => {
+  const isDelete = window.confirm("정말로 삭제하시겠어요?");
+  if (isDelete) {
+    const bookmarkList = JSON.parse(localStorage.getItem("bookmarkList"));
+    const filterBookmarkList = bookmarkList.filter(
+      (item) => item.createAt !== id
+    );
+    localStorage.setItem("bookmarkList", JSON.stringify(filterBookmarkList));
+    document.getElementById(`bookmark-item-${id}`).remove();
+  }
 };
 
 document
