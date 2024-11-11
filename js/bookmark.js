@@ -1,4 +1,5 @@
 const bookmarkInputForm = document.getElementById("bookmark_input_form");
+const bookmarkListElement = document.getElementById("bookmark_list");
 
 let bookmarkList = [];
 if (localStorage.getItem("bookmarkList")) {
@@ -19,6 +20,7 @@ const addBookmarkItem = () => {
   localStorage.setItem("bookmarkList", JSON.stringify(bookmarkList));
   document.getElementById("name_input").value = "";
   document.getElementById("url_input").value = "";
+  bookmarkItem({ name, url, createAt });
   isAddBtnToggle();
 };
 
@@ -35,7 +37,30 @@ const isAddBtnToggle = () => {
 };
 
 const bookmarkItem = (item) => {
-  console.log(item);
+  const bookmarkItem = document.createElement("div");
+  bookmarkItem.classList.add("bookmark_item");
+  bookmarkItem.id = `bookmark-item-${item.createAt}`;
+
+  const bookmarkUrl = document.createElement("a");
+  bookmarkUrl.href = item.url;
+
+  const bookmarkImg = document.createElement("img");
+  bookmarkImg.src = `https://www.google.com/s2/favicons?domain_url=${item.url}`;
+
+  const bookmarkName = document.createElement("div");
+  bookmarkName.classList.add("bookmark_name");
+  bookmarkName.textContent = item.name;
+
+  const deleteBtn = document.createElement("div");
+  deleteBtn.classList.add("delete_btn");
+  deleteBtn.textContent = "삭제";
+
+  bookmarkItem.appendChild(bookmarkUrl);
+  bookmarkItem.appendChild(deleteBtn);
+  bookmarkUrl.appendChild(bookmarkImg);
+  bookmarkUrl.appendChild(bookmarkName);
+
+  bookmarkListElement.appendChild(bookmarkItem);
 };
 
 const setBookmarkList = () => {
