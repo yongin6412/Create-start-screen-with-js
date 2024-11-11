@@ -104,7 +104,60 @@ body {
   color: white;
 }
 
+.bookmark_add_btn {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: rgba(244, 244, 244, 0.2) 0.5px solid;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.bookmark_add_btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .bookmark_input_form {
   display: flex;
   flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: rgba(244, 244, 244, 0.2) 0.5px solid;
+}
+
+.bookmark_input_form .bookmark_input_name .lable {
+  font-size: var(--xsamll);
+  margin: 5px 0;
+}
+
+.bookmark_input_form .bookmark_input_url .lable {
+  font-size: var(--xsamll);
+  margin: 5px 0;
+}
+
+.bookmark_input_form input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.bookmark_input_form .bookmark_input_btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookmark_input_form .bookmark_input_btn div {
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: rgba(244, 244, 244, 0.2) 0.5px solid;
+  padding: 5px 25px;
+  cursor: pointer;
+}
+
+.bookmark_input_form .bookmark_input_btn div:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
