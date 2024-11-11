@@ -4,7 +4,8 @@
   --large: 28px;
   --medium: 18px;
   --small: 16px;
-  --xsamll: 14px;
+  --xsmall: 14px;
+  --xxsmall: 12px;
 }
 
 * {
@@ -67,7 +68,7 @@ body {
 .bookmark_open {
   width: 300px;
   padding: 15px 30px;
-  font-size: var(--xsamll);
+  font-size: var(--xsmall);
   position: absolute;
   top: 0;
   right: 0;
@@ -81,7 +82,7 @@ body {
 .bookmark_close {
   width: 300px;
   padding: 15px 30px;
-  font-size: var(--xsamll);
+  font-size: var(--xsmall);
   position: absolute;
   top: 0;
   right: 0;
@@ -129,12 +130,12 @@ body {
 }
 
 .bookmark_input_form .bookmark_input_name .lable {
-  font-size: var(--xsamll);
+  font-size: var(--xsmall);
   margin: 5px 0;
 }
 
 .bookmark_input_form .bookmark_input_url .lable {
-  font-size: var(--xsamll);
+  font-size: var(--xsmall);
   margin: 5px 0;
 }
 
@@ -160,4 +161,30 @@ body {
 
 .bookmark_input_form .bookmark_input_btn div:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bookmark_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bookmark_list .bookmark_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: rgba(244, 244, 244, 0.2) 0.5px solid;
+}
+
+.bookmark_list .bookmark_item a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bookmark_list .delete_btn {
+  font-size: var(--xxsmall);
 }

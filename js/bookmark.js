@@ -34,9 +34,21 @@ const isAddBtnToggle = () => {
   }
 };
 
+const bookmarkItem = (item) => {
+  console.log(item);
+};
+
+const setBookmarkList = () => {
+  bookmarkList.forEach((item) => {
+    bookmarkItem(item);
+  });
+};
+
 document
   .getElementById("bookmark_add_btn")
   .addEventListener("click", isAddBtnToggle);
 
 document.getElementById("add_btn").addEventListener("click", addBookmarkItem);
 document.getElementById("cancel_btn").addEventListener("click", isAddBtnToggle);
+
+setBookmarkList();
