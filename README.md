@@ -1,9 +1,9 @@
-![next](https://github.com/user-attachments/assets/4b31ab9f-d3f4-4d51-ba94-51742426723f)# JavaScript로 시작화면 만들기
+# JavaScript로 시작화면 만들기
 
 ![image](https://github.com/user-attachments/assets/9be47d3a-ca23-4d86-9025-645a0da236b4)
 
 
-###JavaScript만을 활용하여 만들어본 크롬 초기화면 프로젝트
+### JavaScript만을 활용하여 만들어본 크롬 초기화면 프로젝트
 
 ---
 
