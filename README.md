@@ -51,7 +51,56 @@
 
 ---
 
-## 6. 북마크 데이터 렌더링하기
+## 6. 북마크 데이터 렌더링 및 삭제하기
+- 로컬 스토리지에 저장된 데이터를 가져와서 화면에 렌더링 시키는데 이때 index.html 파일에 임시로 데이터를 만들어서 미리 스타일을 다 지정한 뒤 데이터를 추가하는 코드를 작성하면 좀 더 쉽게 작성할 수 있다.
+```
+/* 이런식으로 index.html에 추가될 요소들을 미리 틀을 작성한뒤 */
+
+  <div class="bookmark_item">
+    <a href="/">
+      <img src="/" />
+      <div class="bookmark_name">네이버</div>
+    </a>
+    <div class="delete_btn" id="delete_btn">삭제</div>
+  </div>
+```
+```
+/* 새로운 요소를 추가하는 함수안에 코드들을 index.html에 미리 작성해놓은 태그들을 바탕으로 작성하면 쉽게 작성가능하다. */
+
+const setBookmarkItem = (item) => {
+  const bookmarkItem = document.createElement("div");
+  bookmarkItem.classList.add("bookmark_item");
+  bookmarkItem.id = `bookmark-item-${item.createAt}`;
+
+  const bookmarkUrl = document.createElement("a");
+  bookmarkUrl.href = item.url;
+
+  const bookmarkImg = document.createElement("img");
+  bookmarkImg.src = `https://www.google.com/s2/favicons?domain_url=${item.url}`;
+
+  const bookmarkName = document.createElement("div");
+  bookmarkName.classList.add("bookmark_name");
+  bookmarkName.textContent = item.name;
+
+  const deleteBtn = document.createElement("div");
+  deleteBtn.classList.add("delete_btn");
+  deleteBtn.textContent = "삭제";
+  deleteBtn.addEventListener("click", () => {
+    deleteItem(item.createAt);
+  });
+
+  bookmarkItem.appendChild(bookmarkUrl);
+  bookmarkItem.appendChild(deleteBtn);
+  bookmarkUrl.appendChild(bookmarkImg);
+  bookmarkUrl.appendChild(bookmarkName);
+  bookmarkListElement.appendChild(bookmarkItem);
+};
+```
+
+
+![next](https://github.com/user-attachments/assets/d6d01602-3ef2-4919-9375-f7298c2f0260)
+
+
 
 
 
